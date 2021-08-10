@@ -1,0 +1,46 @@
+
+
+<h1>Get Accesses</h1>
+
+<table class="table table-dark table-responsive table-hover">
+  <thead>
+    <tr>
+      <th>Full name</th>
+      <th>Email</th>
+      <th>Phne</th>
+      <th>Work place</th>
+      <th>Website</th>
+      <th>Work vertical</th>
+      <th>Use case</th>
+      <th>Use region</th>
+      <th>Monthly</th>
+      <th>Approval</th>
+      <th>Early access</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @get_accesses.each do |get_access| %>
+      <tr>
+        <td><%= get_access.full_name %></td>
+        <td><%= get_access.email %></td>
+        <td><%= get_access.phne %></td>
+        <td><%= get_access.work_place %></td>
+        <td><%= get_access.website %></td>
+        <td><%= get_access.work_vertical %></td>
+        <td><%= get_access.use_case %></td>
+        <td><%= get_access.use_region %></td>
+        <td><%= get_access.monthly %></td>
+        <td><%= get_access.approval %></td>
+        <td><%= get_access.early_access %></td>
+        <!-- <td><%= link_to 'Show', get_access %></td>
+        <td><%= link_to 'Edit', edit_get_access_path(get_access) %></td>
+        <td><%= link_to 'Destroy', get_access, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

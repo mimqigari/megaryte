@@ -1,0 +1,80 @@
+
+
+
+<%= form_with(model: get_access) do |form| %>
+  <% if get_access.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(get_access.errors.count, "error") %> prohibited this get_access from being saved:</h2>
+
+      <ul>
+        <% get_access.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div align="center" class="field form-group">
+    <i class="bi bi-file-person-fill" style="font-size: 2rem; color: dark;"></i>
+    <%= form.text_field :full_name, placeholder:'Enter Full Name', class:'form-control' %>
+  </div>
+<hr>
+
+  <div align="center" class="field form-group">
+   <i class="bi bi-at" style="font-size: 2rem; color: dark;"></i>
+    <%= form.text_field :email, placeholder:'Enter your email address', class:'form-control' %>
+  </div>
+<hr>
+  <div align="center" class="field form-group">
+    <i class="bi bi-telephone-fill" style="font-size: 2rem; color: dark;"></i>
+    <%= form.number_field :phne, placeholder:'Enter phone number.', class:'form-control' %>
+  </div>
+<hr>
+  <div align="center" class="field form-group">
+    <i class="bi bi-building" style="font-size: 2rem; color: dark;"></i>
+    <%= form.text_field :work_place, placeholder:'Enter your email address', class:'form-control' %>
+  </div>
+<hr>
+  <div align="center" class="field form-group">
+    <i class="bi bi-globe2" style="font-size: 2rem; color: dark;"></i>
+    <%= form.text_field :website, placeholder:'Website. (www.website.com)', class:'form-control' %>
+  </div>
+<hr>
+  <div align="center" class="field form-group">
+    <i class="bi bi-bookmark-star-fill" style="font-size: 2rem; color: dark;"></i>
+    <%= form.select :work_vertical, [ "Education", "Energy","Entertainment","Financial", "Food","Government","Healthcare Products/Supplements","Healthcare Technology","Insurance","Legal","Marketing","Media","Medical Devices", "Manufacturing","Pharmaceuticals","Real Estate","Religion","Retail","State-Owned Entity","Technology","Telecommunications","Transportation (Travel)","Non-Profit", "General" ], { prompt:"Select a work vertical." }, { class:'btn btn-dark btn-block dropdown-toggle d-flex p-2' } %>
+  </div>
+<hr>
+  <div align="center" class="field form-group">
+    <i class="bi bi-people-fill" style="font-size: 2rem; color: dark;"></i>
+    <%= form.select :use_case, [ "Political", "Professional / Business" ], { prompt:"Select a use case." }, { class:'btn btn-dark btn-block dropdown-toggle d-flex p-2' } %>
+  </div>
+<hr>
+
+  <div align="center" class="field form-group">
+    <i class="bi bi-geo-alt-fill" style="font-size: 2rem; color: dark;"></i>
+    <%= form.text_field :use_region, class:'form-control', placeholder:'Target Location.' %>
+  </div>
+<hr>
+
+  <div align="center" class="field form-group">
+    <i class="bi bi-calendar-week-fill" style="font-size: 2rem; color: dark;"></i>
+    <%= form.number_field :monthly, placeholder:'Monthly audience volume.', class:'form-control' %>
+  </div>
+<hr>
+
+  <div align="center" class="field form-group">
+
+    <%= form.check_box :approval, type: :hidden %>
+  </div>
+
+  <div align="center" class="field form-group">
+    <a>Request Early Access</a>
+    <%= form.check_box :early_access %>
+  </div>
+<hr>
+  <div align="center" class="actions">
+    <%= form.submit nil, class: 'btn btn-dark'%>
+  </div>
+  <br>
+<% end %>

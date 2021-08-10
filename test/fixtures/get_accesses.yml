@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  full_name: MyString
+  email: MyString
+  phne: 1
+  work_place: MyString
+  website: MyString
+  work_vertical: MyString
+  use_case: MyString
+  use_region: MyString
+  monthly: 1
+  approval: false
+  early_access: false
+
+two:
+  full_name: MyString
+  email: MyString
+  phne: 1
+  work_place: MyString
+  website: MyString
+  work_vertical: MyString
+  use_case: MyString
+  use_region: MyString
+  monthly: 1
+  approval: false
+  early_access: false
